@@ -1,4 +1,14 @@
 {
+    "workbench.colorCustomizations": {
+        "[Copilot*]": {
+            "gitDecoration.ignoredResourceForeground": "#727373"
+        }
+    },
+    "editor.tokenColorCustomizations": {
+        "[Copilot*]": {
+            "comments": "#229977"
+        }
+    },
     "jupyter.jupyterServerType": "remote",
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Args": [
@@ -180,7 +190,8 @@
     "[python]": {
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
-        }
+        },
+        "editor.defaultFormatter": "ms-python.python"
     },
     "json.format.enable": true,
     "files.insertFinalNewline": true,
@@ -194,6 +205,19 @@
         "markdown": false
     },
     "github.copilot.advanced": {},
-    "workbench.colorTheme": "Visual Studio Dark",
-    "jupyter.allowUnauthorizedRemoteConnection": true
+    "workbench.colorTheme": "Copilot Theme",
+    "jupyter.allowUnauthorizedRemoteConnection": true,
+    "notebook.lineNumbers": "on",
+    "go.lintTool": "golangci-lint",
+    "black-formatter.args": [
+        "--line-length=120"
+    ],
+    "git.autofetch": true,
+    "go.inlayHints.assignVariableTypes": true,
+    "go.inlayHints.compositeLiteralFields": true,
+    "go.inlayHints.compositeLiteralTypes": true,
+    "go.inlayHints.constantValues": true,
+    "go.inlayHints.functionTypeParameters": true,
+    "go.inlayHints.parameterNames": true,
+    "go.inlayHints.rangeVariableTypes": true
 }
