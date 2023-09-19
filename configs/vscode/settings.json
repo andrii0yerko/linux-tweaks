@@ -1,8 +1,9 @@
 {
     "workbench.colorCustomizations": {
         "[Copilot*]": {
-            "gitDecoration.ignoredResourceForeground": "#727373"
-        }
+            "gitDecoration.ignoredResourceForeground": "#727373",
+            "editor.foreground": "#cccccc"
+        },
     },
     "editor.tokenColorCustomizations": {
         "[Copilot*]": {
@@ -18,7 +19,7 @@
     "mypy.runUsingActiveInterpreter": true,
     "mypy.configFile": "mypy.ini",
     "autoDocstring.startOnNewLine": true,
-    "python.formatting.provider": "black",
+    "python.formatting.provider": "none",
     "latex-workshop.latex.tools": [
         {
             "name": "latexmk",
@@ -191,7 +192,7 @@
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
         },
-        "editor.defaultFormatter": "ms-python.python"
+        "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "json.format.enable": true,
     "files.insertFinalNewline": true,
@@ -205,13 +206,10 @@
         "markdown": false
     },
     "github.copilot.advanced": {},
-    "workbench.colorTheme": "Copilot Theme",
+    "workbench.colorTheme": "Copilot Theme - Higher Contrast",
     "jupyter.allowUnauthorizedRemoteConnection": true,
     "notebook.lineNumbers": "on",
     "go.lintTool": "golangci-lint",
-    "black-formatter.args": [
-        "--line-length=120"
-    ],
     "git.autofetch": true,
     "go.inlayHints.assignVariableTypes": true,
     "go.inlayHints.compositeLiteralFields": true,
@@ -219,5 +217,9 @@
     "go.inlayHints.constantValues": true,
     "go.inlayHints.functionTypeParameters": true,
     "go.inlayHints.parameterNames": true,
-    "go.inlayHints.rangeVariableTypes": true
+    "go.inlayHints.rangeVariableTypes": true,
+    "githubPullRequests.pullBranch": "never",
+    "redhat.telemetry.enabled": false,
+    "cloudcode.autoDependencies": "off",
+    "python.analysis.typeCheckingMode": "basic"
 }
