@@ -21,7 +21,6 @@ $(which duplicity) full \
     --exclude '**/*_tmp' \
     --exclude '**/tmp_*' \
     --exclude '**/tmp' \
-    --dry-run \
     ~ $DESTINATION  | tee $TMP_LOGFILE
 
 EXIT_STATUS=$?
