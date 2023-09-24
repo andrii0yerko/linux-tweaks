@@ -13,11 +13,14 @@ export PASSPHRASE
 $(which duplicity) full \
     --exclude ~/.local \
     --exclude ~/.cache \
+    --exclude ~/.pyenv \
+    --exclude ~/.npm \
     --exclude ~/snap \
     --exclude ~/go \
     --exclude ~/VirtualBox \
     --exclude ~/Downloads \
-    --exclude '**/env' \
+    --exclude '**/.venv/' \
+    --exclude '**/env/' \
     --exclude '**/*_tmp' \
     --exclude '**/tmp_*' \
     --exclude '**/tmp' \
