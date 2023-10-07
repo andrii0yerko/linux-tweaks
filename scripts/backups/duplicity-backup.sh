@@ -28,7 +28,7 @@ $(which duplicity) full \
 
 EXIT_STATUS=$?
 
-$(which duplicity) remove-all-but-n-full 3 --force "$DESTINATION" | tee -a "$TMP_LOGFILE"
+$(which duplicity) remove-all-but-n-full 2 --force "$DESTINATION" | tee -a "$TMP_LOGFILE"
 
 
 if [ -n "$TELEGRAM_API_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
