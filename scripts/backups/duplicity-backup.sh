@@ -19,8 +19,15 @@ $(which duplicity) full \
     --exclude ~/go \
     --exclude ~/VirtualBox \
     --exclude ~/Downloads \
+    --exclude ~/.gradle \
+    --exclude ~/.npm \
+    --exclude ~/.minecraft \
+    --exclude ~/.wine \
+    --exclude ~/.conda \
+    --exclude ~/Android \
     --exclude '**/.venv/' \
     --exclude '**/env/' \
+    --exclude '**/venv/' \
     --exclude '**/*_tmp' \
     --exclude '**/tmp_*' \
     --exclude '**/tmp' \
