@@ -33,7 +33,8 @@ $(which duplicity) full \
     --exclude '**/tmp' \
     ~ "$DESTINATION" | tee "$TMP_LOGFILE"
 
-EXIT_STATUS=$?
+# notice that PIPESTATUS does not work on zsh
+EXIT_STATUS=${PIPESTATUS[0]}
 
 $(which duplicity) remove-all-but-n-full 2 --force "$DESTINATION" | tee -a "$TMP_LOGFILE"
 
@@ -52,5 +53,6 @@ if [ -n "$TELEGRAM_API_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
         -d "chat_id=$TELEGRAM_CHAT_ID" \
         -d "text=$TEXT"
 
-    rm "$TMP_LOGFILE"
 fi
+
+rm "$TMP_LOGFILE"
