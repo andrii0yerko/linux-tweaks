@@ -1,7 +1,6 @@
 #!/bin/sh
 
-test -x "$(which duplicity)" || exit 0
-
+test -x "$(which duplicity)" || exit 1
 
 CURRENT_DATE=$(date "+%Y%m%d")
 TMP_LOGFILE="/tmp/duplicity_output_${CURRENT_DATE}.txt"
