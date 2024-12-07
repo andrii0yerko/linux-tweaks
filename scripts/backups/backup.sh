@@ -41,6 +41,6 @@ DIR="$(dirname "$(readlink -f "$0")")"
 
 # run_with_logging echo "abc"
 # run_with_logging touch /root
-# run_with_logging "$DIR"/notion/notion-backup.sh ~/data/notion
+run_with_logging "$DIR"/notion/notion-backup.sh ~/data/notion
 run_with_logging "$DIR"/gdrive/gdrive-backup.sh ~/data/drive
-# run_with_logging "$DIR"/duplicity/duplicity-backup.sh
+run_with_logging "$DIR"/duplicity/duplicity-backup.sh
