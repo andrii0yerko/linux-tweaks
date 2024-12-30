@@ -78,21 +78,16 @@ run() {
   mdDir="$cwd/markdown"
   mdFile="$cwd/markdown.zip"
 
+  if [ -f "$mdFile" ]; then
+    mv "$mdFile" "$mdFile"_old
+  fi
+
   echo "Exporting to $mdFile"
   exportFromNotion "markdown" "$mdFile"
 
-  if [ -d "$mdDir" ]; then
-    mv "$mdDir" "$mdDir"_old
+  if [ -f "$mdDir"_old ] && [ -f "$mdFile" ]; then
+    rm "$mdDir"_old
   fi
-
-  mkdir -p "$mdDir"
-  unzip -q "$mdFile" -d "$mdDir"
-
-  if [ -d "$mdDir"_old ]; then
-    rm -rf "$mdDir"_old
-  fi
-
-  rm -f "$mdFile"
 }
 
 run "$1"

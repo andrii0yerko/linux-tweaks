@@ -8,6 +8,9 @@ DIR="$(dirname "$(readlink -f "$0")")"
 export PASSPHRASE
 
 $(which duplicity) full \
+    --exclude ~/.arduino15 \
+    --exclude ~/.android \
+    --exclude ~/.PlayOnLinux \
     --exclude ~/.local \
     --exclude ~/.cache \
     --exclude ~/.pyenv \
